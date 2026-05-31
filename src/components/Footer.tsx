@@ -1,5 +1,4 @@
-import { Clock, Instagram, Mail, MapPin, Phone } from "lucide-react";
-import logoImg from "@/assets/logo.png";
+import { Clock, Instagram, Mail, MapPin, Phone, Home } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -11,12 +10,12 @@ const Footer = () => {
             {/* Brand */}
             <div className="lg:col-span-1">
               <a href="#" className="flex items-center gap-2.5 mb-4 group w-fit">
-                <img
-                  src={logoImg}
-                  alt="Logo Conquista Imóveis"
-                  className="w-10 h-10 object-contain rounded-full border transition-transform duration-300 group-hover:scale-105"
-                  style={{ borderColor: "#0d9488" }}
-                />
+                <div 
+                  className="w-10 h-10 rounded-full flex items-center justify-center border"
+                  style={{ borderColor: "#0d9488", backgroundColor: "rgba(13, 148, 136, 0.08)" }}
+                >
+                  <Home className="w-5 h-5 text-[#0d9488]" strokeWidth={1.5} />
+                </div>
                 <span
                   className="font-display font-bold text-lg text-stone-100"
                 >

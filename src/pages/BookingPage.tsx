@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import { useNavigate, Link } from "react-router-dom";
-import { ArrowLeft, Calendar, Clock, User, CheckCircle2, ShieldCheck, HelpCircle, MapPin, Calculator, Coins } from "lucide-react";
+import { ArrowLeft, Calendar, Clock, User, CheckCircle2, ShieldCheck, HelpCircle, MapPin, Calculator, Coins, Home } from "lucide-react";
 import WhatsAppIcon from "@/components/ui/WhatsAppIcon";
-import logoImg from "@/assets/logo.png";
+import heroImage from "@/assets/hero-barbershop.jpg";
 import { toast } from "sonner";
 
 const INCOME_BRACKETS = [
@@ -107,19 +107,32 @@ const BookingPage = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col" style={{ backgroundColor: "#fafaf9", color: "#1c1917" }}>
-      {/* Header */}
-      <header className="border-b border-stone-100 py-4 bg-white shadow-sm">
-        <div className="container mx-auto px-4 flex items-center justify-between">
-          <Link to="/" className="flex items-center gap-2.5 group">
-            <img src={logoImg} alt="Logo Conquista Imóveis" className="w-9 h-9 object-contain rounded-full" />
-            <span className="font-display font-bold text-lg text-stone-900">Conquista Imóveis</span>
-          </Link>
-          <Link to="/" className="inline-flex items-center gap-1.5 text-sm font-semibold text-stone-500 hover:text-teal-700 transition-colors">
-            <ArrowLeft className="w-4 h-4" /> Voltar ao Início
-          </Link>
-        </div>
-      </header>
+    <div className="min-h-screen flex flex-col relative overflow-hidden" style={{ backgroundColor: "#fafaf9", color: "#1c1917" }}>
+      {/* Background Image Overlay */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-[0.06] pointer-events-none z-0" 
+        style={{ backgroundImage: `url(${heroImage})` }} 
+      />
+      
+      {/* Content wrapper to keep text on top of background */}
+      <div className="relative z-10 flex-1 flex flex-col">
+        {/* Header */}
+        <header className="border-b border-stone-100 py-4 bg-white shadow-sm">
+          <div className="container mx-auto px-4 flex items-center justify-between">
+            <Link to="/" className="flex items-center gap-2.5 group">
+              <div 
+                className="w-9 h-9 rounded-full flex items-center justify-center border"
+                style={{ borderColor: "#0d9488", backgroundColor: "rgba(13, 148, 136, 0.08)" }}
+              >
+                <Home className="w-4 h-4 text-[#0d9488]" strokeWidth={1.5} />
+              </div>
+              <span className="font-display font-bold text-lg text-stone-900">Conquista Imóveis</span>
+            </Link>
+            <Link to="/" className="inline-flex items-center gap-1.5 text-sm font-semibold text-stone-500 hover:text-teal-700 transition-colors">
+              <ArrowLeft className="w-4 h-4" /> Voltar ao Início
+            </Link>
+          </div>
+        </header>
 
       {/* Booking Container */}
       <main className="flex-1 container mx-auto px-4 py-10 max-w-4xl flex flex-col">
@@ -527,6 +540,7 @@ const BookingPage = () => {
       <footer className="py-6 border-t border-stone-200 mt-auto text-center text-xs bg-white text-stone-500">
         <p>© 2026 Conquista Imóveis. Todos os direitos reservados. CRECI: 123456-F.</p>
       </footer>
+      </div>
     </div>
   );
 };
