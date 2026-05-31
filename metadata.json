@@ -1,0 +1,15 @@
+{
+  "name": "conquista-imoveis",
+  "description": "Corretor imobiliário especializado no primeiro imóvel. Tema claro e aconchegante, esmeralda e âmbar, didático e livre de ostentação. Contém simulador de financiamento Caixa Aqui.",
+  "style": ["clean", "light", "welcoming", "educational"],
+  "bestFor": ["corretores", "imobiliária-popular", "primeiro-lar", "financiamento-caixa"],
+  "sections": ["hero", "sobre", "processo", "servicos", "diferenciais", "depoimentos", "galeria-conquistas", "cta", "localizacao"],
+  "primaryColor": "teal",
+  "accentColor": "amber",
+  "displayFont": "Playfair Display",
+  "bodyFont": "Inter",
+  "usageCount": 1,
+  "nichoHistory": ["corretagem-popular", "primeiro-imovel"],
+  "lastUsed": "2026-05-31",
+  "createdAt": "2026-05-31"
+}
